@@ -12,36 +12,44 @@
   <% end %>
 
   <div>
+    <br>
     <%= form.label "Date", style: "display: block" %>
-    <%= form.date_field :date %>
+    <%= form.date_field :date, :class => "form-control" %>
+    <br>
   </div>
 
   <div>
-    <%= form.label "Enter your weight today", style: "display: block" %>
-    <%= form.number_field :weight %>
+    <%= form.label "Weight (kg)", style: "display: block" %>
+    <%= form.number_field :weight, :class => "form-control" %>
+    <br>
   </div>
 
   <div>
-    <%= form.label "Write about your day here", style: "display: block" %>
-    <%= form.text_area :entry %>
+    <%= form.label "Journal Entry:", style: "display: block" %>
+    <%= form.text_area :entry, :class => "form-control" %>
+    <br>
   </div>
 
   <div>
     <%= form.label "Did you attend the gym today?", style: "display: block" %>
-    <%= form.check_box :gym_attendance %>
+    <%= form.check_box :gym_attendance, :class => "form-check-input" %>
+    <br><br>
   </div>
 
   <div>
-    <%= form.label "Water", style: "display: block" %>
-    <%= form.number_field :water %>
+    <%= form.label "Water (ml)", style: "display: block" %>
+    <%= form.number_field :water, :class => "form-control" %>
+    <br>
   </div>
 
   <div>
-    <%= form.label "Calories", style: "display: block" %>
-    <%= form.number_field :calories %>
+    <%= form.label "Calories (kCal)", style: "display: block" %>
+    <%= form.number_field :calories, :class => "form-control" %>
+    <br>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary" %>
+    <br>
   </div>
 <% end %>
