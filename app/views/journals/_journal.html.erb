@@ -1,38 +1,21 @@
 <div id="<%= dom_id journal %>">
-  <p>
-    <strong>Date:</strong>
-    <%= journal.date %>
-  </p>
-
-  <p>
-    <strong>Entry:</strong>
-    <%= journal.entry %>
-  </p>
-
-  <p>
-    <strong>Weight:</strong>
-    <%= journal.weight %>
-  </p>
-
-  <p>
-    <strong>Water:</strong>
-    <%= journal.water %>
-  </p>
-
-  <p>
-    <strong>Calories:</strong>
-    <%= journal.calories %>
-  </p>
-
-  <div>
-    <strong>Gym attendance:</strong>
-    <% if journal.gym_attendance %>
-      ✓
-    <% else %>
-      ✕
-    <% end %>
+  <div class="jumbotron">
+    <h1 class="display-5"><%= journal.date %></h1>
+    <hr class="my-4">
+    <p class="lead"><%= journal.entry %></p>
+    <hr class="my-4">
+    <p><strong>Weight: </strong><%= journal.weight %></p>
+    <p><strong>Water: </strong><%= journal.water %></p>
+    <p><strong>Calories: </strong><%= journal.calories %></p>
+    <div>
+      <strong>Gym attendance:</strong>
+      <% if journal.gym_attendance %>
+        ✓
+      <% else %>
+        ✕
+      <% end %>
+    </div>
   </div>
-
+  <hr class="my-4">
   <br>
-
 </div>

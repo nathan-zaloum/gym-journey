@@ -3,8 +3,15 @@
 <%= render @journal %>
 
 <div>
-  <%= link_to "Edit this journal", edit_journal_path(@journal) %> |
-  <%= link_to "Back to journals", journals_path %>
+  <%= link_to "Edit this journal", edit_journal_path(@journal), :class => "btn btn-info" %>
+  <br><br>
+</div>
 
-  <%= button_to "Destroy this journal", @journal, method: :delete %>
+<div>
+  <%= button_to "Destroy this journal", @journal, method: :delete, :class => "btn btn-danger" %>
+  <br>
+</div>
+
+<div>
+  <%= link_to "Back to journals", journals_path, :class => "btn btn-secondary" %>
 </div>

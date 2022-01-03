@@ -21,6 +21,7 @@
           <td><%= journal.calories %></td>
           <td><%= journal.water %></td>
           <td><%= link_to "Show", journal, :class => "btn btn-info" %></td>
+          <td><%= link_to "Edit", edit_journal_path(journal), :class => "btn btn-info" %></td>
           <td><%= link_to "Delete", journal, :class => "btn btn-danger" %></td>
         </tr>
       <% end %>
