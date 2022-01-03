@@ -3,14 +3,32 @@
 <h1>Journal Entries</h1>
 
 <div id="journals">
-  <% @journals.each do |journal| %>
-    <%= render journal %>
-    <p>
-      <%= link_to "Show this journal", journal %>
-    </p>
-  <% end %>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Weight (kg)</th>
+        <th scope="col">Calories (kCal)</th>
+        <th scope="col">Water (mL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @journals.each do |journal| %>
+        <tr>
+          <th scope="row"><%= journal.date %></th>
+          <td><%= journal.weight %></td>
+          <td><%= journal.calories %></td>
+          <td><%= journal.water %></td>
+          <td><%= link_to "Show", journal, :class => "btn btn-info" %></td>
+          <td><%= link_to "Delete", journal, :class => "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <div>
+  <br>
   <%= link_to "New journal", new_journal_path, :class => "btn btn-primary" %>
 </div>

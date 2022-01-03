@@ -5,18 +5,13 @@
   </p>
 
   <p>
-    <strong>Weight:</strong>
-    <%= journal.weight %>
-  </p>
-
-  <p>
     <strong>Entry:</strong>
     <%= journal.entry %>
   </p>
 
   <p>
-    <strong>Gym attendance:</strong>
-    <%= journal.gym_attendance %>
+    <strong>Weight:</strong>
+    <%= journal.weight %>
   </p>
 
   <p>
@@ -28,5 +23,16 @@
     <strong>Calories:</strong>
     <%= journal.calories %>
   </p>
+
+  <div>
+    <strong>Gym attendance:</strong>
+    <% if journal.gym_attendance %>
+      ✓
+    <% else %>
+      ✕
+    <% end %>
+  </div>
+
+  <br>
 
 </div>
