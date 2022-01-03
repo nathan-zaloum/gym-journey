@@ -1,16 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Journal Entries</h1>
 
 <div id="journals">
   <br>
-  <table class="table table-striped">
-    <thead>
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="table-secondary">
       <tr>
         <th scope="col">Date</th>
         <th scope="col">Weight (kg)</th>
         <th scope="col">Calories (kCal)</th>
         <th scope="col">Water (mL)</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -20,9 +21,9 @@
           <td><%= journal.weight %></td>
           <td><%= journal.calories %></td>
           <td><%= journal.water %></td>
-          <td><%= link_to "Show", journal, :class => "btn btn-info" %></td>
-          <td><%= link_to "Edit", edit_journal_path(journal), :class => "btn btn-info" %></td>
-          <td><%= link_to "Delete", journal, :class => "btn btn-danger" %></td>
+          <td><%= link_to "Show", journal, :class => "btn btn-link link-primary" %></td>
+          <td><%= link_to "Edit", edit_journal_path(journal), :class => "btn btn-link link-primary" %></td>
+          <td><%= button_to "Delete", journal, method: :delete, :class => "btn btn-link link-danger" %></td>
         </tr>
       <% end %>
     </tbody>

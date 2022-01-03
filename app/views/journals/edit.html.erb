@@ -5,6 +5,10 @@
 <br>
 
 <div>
-  <%= link_to "Show this journal", @journal %> |
-  <%= link_to "Back to journals", journals_path %>
+  <%= link_to "Show this journal", @journal, :class => "btn btn-primary" %>
+  <br><br>
+</div>
+
+<div>
+  <%= link_to "Back to journals", journals_path, :class => "btn btn-secondary" %>
 </div>

@@ -4,11 +4,11 @@
     <hr class="my-4">
     <p class="lead"><%= journal.entry %></p>
     <hr class="my-4">
-    <p><strong>Weight: </strong><%= journal.weight %></p>
-    <p><strong>Water: </strong><%= journal.water %></p>
+    <p><strong>Weight: </strong><%= journal.weight %>kg</p>
+    <p><strong>Water: </strong><%= journal.water %>mL</p>
     <p><strong>Calories: </strong><%= journal.calories %></p>
     <div>
-      <strong>Gym attendance:</strong>
+      <strong>Gym:</strong>
       <% if journal.gym_attendance %>
         ✓
       <% else %>

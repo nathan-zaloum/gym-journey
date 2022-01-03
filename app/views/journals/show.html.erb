@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @journal %>
 
 <div>
-  <%= link_to "Edit this journal", edit_journal_path(@journal), :class => "btn btn-info" %>
+  <%= link_to "Edit this journal", edit_journal_path(@journal), :class => "btn btn-primary" %>
   <br><br>
 </div>
 
 <div>
-  <%= button_to "Destroy this journal", @journal, method: :delete, :class => "btn btn-danger" %>
+  <%= button_to "Delete this journal", @journal, method: :delete, :class => "btn btn-danger" %>
   <br>
 </div>
 
