@@ -1,5 +1,7 @@
 class JournalsController < ApplicationController
   before_action :set_journal, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [ :index, :show ]
+  before_action :correct_user, only: [ :edit, :update, :destroy ]
 
   # GET /journals or /journals.json
   def index
@@ -12,7 +14,8 @@ class JournalsController < ApplicationController
 
   # GET /journals/new
   def new
-    @journal = Journal.new
+    # @journal = Journal.new
+    @journal = current_user.journal.build
   end
 
   # GET /journals/1/edit
@@ -21,7 +24,8 @@ class JournalsController < ApplicationController
 
   # POST /journals or /journals.json
   def create
-    @journal = Journal.new(journal_params)
+    # @journal = Journal.new(journal_params)
+    @journal = current_user.journal.build(journal_params)
 
     respond_to do |format|
       if @journal.save
@@ -57,6 +61,11 @@ class JournalsController < ApplicationController
     end
   end
 
+  def correct_user
+    @journal = current_user.journal.find_by(id: params[:id])
+    redirect_to journal_path, notice: "Not Authorized To Edit This Journal" if @journal.nil?
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_journal
@@ -65,6 +74,6 @@ class JournalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def journal_params
-      params.require(:journal).permit(:date, :weight, :entry, :gym_attendance, :gym_duration, :gym_type, :water, :calories)
+      params.require(:journal).permit(:date, :weight, :entry, :gym_attendance, :water, :calories, :user_id)
     end
 end

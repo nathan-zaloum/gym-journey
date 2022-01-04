@@ -20,7 +20,7 @@
 
   <div>
     <%= form.label "Weight (kg)", style: "display: block" %>
-    <%= form.number_field :weight, :class => "form-control" %>
+    <%= form.number_field :weight, step: :any, :class => "form-control" %>
     <br>
   </div>
 
@@ -46,6 +46,10 @@
     <%= form.label "Calories (kCal)", style: "display: block" %>
     <%= form.number_field :calories, :class => "form-control" %>
     <br>
+  </div>
+
+  <div>
+    <%= form.number_field :user_id, id: :journal_user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div>

@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_063957) do
+ActiveRecord::Schema.define(version: 2022_01_04_014824) do
 
   create_table "journals", force: :cascade do |t|
     t.date "date"
     t.decimal "weight"
     t.text "entry"
     t.boolean "gym_attendance"
-    t.time "gym_duration"
-    t.string "gym_type"
     t.integer "water"
     t.integer "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_journals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -16,15 +16,17 @@
     </thead>
     <tbody>
       <% @journals.each do |journal| %>
-        <tr>
-          <th scope="row"><%= journal.date %></th>
-          <td><%= journal.weight %></td>
-          <td><%= journal.calories %></td>
-          <td><%= journal.water %></td>
-          <td><%= link_to "Show", journal, :class => "btn btn-link link-primary" %></td>
-          <td><%= link_to "Edit", edit_journal_path(journal), :class => "btn btn-link link-primary" %></td>
-          <td><%= button_to "Delete", journal, method: :delete, :class => "btn btn-link link-danger" %></td>
-        </tr>
+        <% if journal.user == current_user %>
+          <tr>
+            <th scope="row"><%= journal.date %></th>
+            <td><%= journal.weight %></td>
+            <td><%= journal.calories %></td>
+            <td><%= journal.water %></td>
+            <td><%= link_to "Show", journal, :class => "btn btn-link link-primary" %></td>
+            <td><%= link_to "Edit", edit_journal_path(journal), :class => "btn btn-link link-primary" %></td>
+            <td><%= button_to "Delete", journal, method: :delete, :class => "btn btn-link link-danger" %></td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>
