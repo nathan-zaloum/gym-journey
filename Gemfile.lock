@@ -144,11 +144,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
-    rails_12factor (0.0.2)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (7.0.0)
       actionpack (= 7.0.0)
       activesupport (= 7.0.0)
@@ -204,7 +199,6 @@ GEM
     zeitwerk (2.5.3)
 
 PLATFORMS
-  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -217,7 +211,6 @@ DEPENDENCIES
   pg (~> 1.2, >= 1.2.3)
   puma (~> 5.0)
   rails (~> 7.0.0)
-  rails_12factor (= 0.0.2)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
