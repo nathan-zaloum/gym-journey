@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello, my name is Nathan Zaloum and I am a Software Developer.
 
-Things you may want to cover:
+This is my journal app that lets users keep track of their health journey.
 
-* Ruby version
+I made this as a learning project for Ruby on Rails and Bootstrap.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# You can find my portfolio here at [nathanzaloum.herokuapp.com](nathanzaloum.herokuapp.com)
